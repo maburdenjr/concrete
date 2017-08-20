@@ -15,13 +15,15 @@ import configureStore from './store/configureStore';
 function initView () {
     console.log('Initializing UI View');
     ReactDOM.render(
-        <Router history={hashHistory}>
-            <Route path='/' component={App} />
-            <Route path='/library' component={Library} />
-            <Route path='/login' component={Login} />
-            <Route path='/network' component={Network} />
-            <Route path='/profile' component={Profile} />
-        </Router>    ,
+        <Provider store={configureStore}>
+            <Router history={hashHistory}>
+                <Route path='/' component={App} />
+                <Route path='/library' component={Library} />
+                <Route path='/login' component={Login} />
+                <Route path='/network' component={Network} />
+                <Route path='/profile' component={Profile} />
+            </Router>
+        </Provider>,
         document.getElementById('root')
 );
 }
