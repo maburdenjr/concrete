@@ -1,14 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'react-router-redux';
-//import configureStore, {history} from './store/configureStore';
-import 'babel-polyfill';
+import { Router, Route, browserHistory, IndexRedirect } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
+
+import App from './containers/App';
+import Library from './containers/Library';
+import Login from './containers/Login';
+import Network from './containers/Network';
+import Profile from './containers/Profile';
+
+import configureStore from './store/configureStore';
+
+const history = syncHistoryWithStore(browserHistory, configureStore);
 
 function initView () {
     console.log('Initializing UI View');
     ReactDOM.render(
-    <div>Test</div>,
+        <Router history={history}>
+            <Route path='/' component={App}>
+                <Route path='/library' component={Library} />
+                <Route path='/login' component={Login} />
+                <Route path='/network' component={Network} />
+                <Route path='/profile' component={Profile} />
+            </Route>
+        </Router>    ,
         document.getElementById('root')
 );
 }
