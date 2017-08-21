@@ -8,8 +8,10 @@ class Library extends React.Component {
         return (
             <div>
                 <Navigation {...this.props} activeItem="library"/>
-                <h1>Library</h1>
-                The Libray is open
+                <div className="container">
+                    <h1>Library</h1>
+                    The Libray is open
+                </div>
             </div>
         );
     }

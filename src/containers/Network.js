@@ -8,8 +8,10 @@ class Network extends React.Component {
         return (
             <div>
                 <Navigation {...this.props} activeItem="Network"/>
-                <h1>Network</h1>
-                Networking is good for everyone.
+                <div className="container">
+                    <h1>Network</h1>
+                    Networking is good for everyone.
+                </div>
             </div>
         );
     }

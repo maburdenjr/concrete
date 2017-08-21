@@ -9,8 +9,10 @@ class App extends React.Component {
         return (
             <div>
                 <Navigation {...this.props} activeItem="home" />
-                <h1>Home</h1>
-                This is the Home Page
+                <div className="container">
+                    <h1>Home</h1>
+                    This is the Home Page
+                </div>
             </div>
         );
     }

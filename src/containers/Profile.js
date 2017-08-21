@@ -8,8 +8,10 @@ class Profile extends React.Component {
         return (
             <div>
                 <Navigation {...this.props} activeItem="profile"/>
-                <h1>Profile</h1>
-                Please, tell us some more about yourself.
+                <div className="container">
+                    <h1>Profile</h1>
+                    Please, tell us some more about yourself.
+                </div>
             </div>
         );
     }

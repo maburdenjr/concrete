@@ -5,8 +5,7 @@ class Navigation extends React.Component {
     render () {
         console.log(this.props);
         return (
-            <div>
-                <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <nav className="navbar navbar-inverse" role="navigation">
                     <div className="container">
                         <div className="navbar-header">
                             <button type="button" className="navbar-toggle" data-toggle="collapse"
@@ -29,7 +28,6 @@ class Navigation extends React.Component {
                         </div>
                     </div>
                 </nav>
-            </div>
         );
     }
 }

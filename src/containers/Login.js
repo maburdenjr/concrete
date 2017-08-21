@@ -8,8 +8,10 @@ class Login extends React.Component {
         return (
             <div>
                 <Navigation {...this.props} activeItem="login"/>
-                <h1>Login</h1>
-                Sir, I'm going to need to see your credentials.
+                <div className="container">
+                    <h1>Login</h1>
+                    Sir, I'm going to need to see your credentials.
+                </div>
             </div>
         );
     }
