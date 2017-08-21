@@ -14,7 +14,7 @@ const activeUser = (state = initState, action) => {
             };
         case LOGOUT_USER:
             return {
-                user: 'null',
+                user: null,
                 authenticated: false
             };
 
